@@ -334,6 +334,56 @@
   </div>
 </section>
 
+<!-- ============ VIDEOS ============ -->
+<section class="section section--dark videos" id="watch">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow eyebrow--light">Watch</span>
+      <h2 class="h2">UAE finance rules, <em>explained in under a minute</em></h2>
+      <p class="lead">Short, plain-language videos from our team on the questions business owners ask us most.</p>
+    </div>
+    <div class="videos__grid">
+      <figure class="vid reveal">
+        <div class="vid__phone">
+          <video class="vid__video" controls playsinline preload="none" poster="assets/video/asco-video-1.jpg" aria-label="VAT refunds explained by the ASCO team">
+            <source src="assets/video/asco-video-1.mp4" type="video/mp4">
+            Your browser can't play this video. <a href="assets/video/asco-video-1.mp4">Download it here</a>.
+          </video>
+          <button class="vid__play" type="button" aria-label="Play video: VAT refunds explained"><svg class="ic ic--fill" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></button>
+        </div>
+        <figcaption><strong>VAT refunds, explained</strong><span>How to claim back the VAT your business is owed, quickly.</span></figcaption>
+      </figure>
+      <figure class="vid reveal">
+        <div class="vid__phone">
+          <video class="vid__video" controls playsinline preload="none" poster="assets/video/asco-video-2.jpg" aria-label="Doing business in the UAE, explained by the ASCO team">
+            <source src="assets/video/asco-video-2.mp4" type="video/mp4">
+            Your browser can't play this video. <a href="assets/video/asco-video-2.mp4">Download it here</a>.
+          </video>
+          <button class="vid__play" type="button" aria-label="Play video: doing business in the UAE"><svg class="ic ic--fill" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></button>
+        </div>
+        <figcaption><strong>Doing business in the UAE</strong><span>What every owner should know about accounts, tax and compliance.</span></figcaption>
+      </figure>
+    </div>
+    <div class="videos__cta reveal">
+      <a class="btn btn--light" href="#contact">Talk to our team <svg class="ic"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var vids=[].slice.call(document.querySelectorAll('.vid__video'));
+  vids.forEach(function(v){
+    var wrap=v.parentNode, btn=wrap.querySelector('.vid__play');
+    btn.addEventListener('click',function(){v.play();});
+    v.addEventListener('play',function(){
+      wrap.classList.add('is-playing');
+      vids.forEach(function(o){if(o!==v&&!o.paused)o.pause();});
+    });
+    v.addEventListener('ended',function(){wrap.classList.remove('is-playing');v.load();});
+  });
+})();
+</script>
+
 <!-- ============ INDUSTRIES ============ -->
 <section class="section section--tint" id="industries">
   <div class="container">
